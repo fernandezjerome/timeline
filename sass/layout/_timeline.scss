@@ -27,21 +27,20 @@ body {
     }
 }
 
-.wrapper {
+.timeline {
     overflow-x: hidden;
     position: relative;
-}
-* {
-    box-sizing: border-box;
-}
+    &__cont {
+        display: flex;
+        width: 300vw;
 
-svg {
-    position: absolute;
-    top: 12em;
-    left: 10vw;
-    width: 50vw;
+        .col {
+            display: flex;
+            gap: 3em;
 
-    .mask {
-        width: 0;
+            p {
+                font-size: 0.8rem;
+            }
+        }
     }
 }
