@@ -27,20 +27,30 @@ body {
     }
 }
 
+.timeline__solo {
+    width: 100vw;
+    // height: 100vh;
+    flex-shrink: 0;
+}
+
+.blue {
+    background-color: blue;
+}
+.red {
+    background: red;
+}
+.pink {
+    background: pink;
+}
+
 .timeline {
-    overflow-x: hidden;
-    position: relative;
-    &__cont {
-        display: flex;
-        width: 300vw;
+    height: 600px;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    overflow-x: hidden !important;
+}
 
-        .col {
-            display: flex;
-            gap: 3em;
-
-            p {
-                font-size: 0.8rem;
-            }
-        }
-    }
+.timeline > * {
+    scroll-snap-align: start;
 }
