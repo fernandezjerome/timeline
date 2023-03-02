@@ -1,11 +1,11 @@
-const container = document.querySelector(".timeline__cont");
-const sections = gsap.utils.toArray(".timeline__cont section");
+const container = document.querySelector(".timeline__wrapper");
+const sections = gsap.utils.toArray(".timeline__wrapper section");
 
 let scrollTween = gsap.to(sections, {
     xPercent: -100 * (sections.length - 1),
     ease: "none",
     scrollTrigger: {
-        trigger: ".timeline__cont",
+        trigger: ".timeline__wrapper",
         pin: true,
         start: "-240px",
         scrub: 1,
