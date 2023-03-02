@@ -1,1 +1,47 @@
 @use "../modules" as *;
+body {
+    background-color: $colourGray;
+}
+
+.headline {
+    margin: px(80) 0;
+    display: grid;
+    margin-inline: auto;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    width: min(100% - px(40), px(1140));
+    @include breakpoint(tablet) {
+        grid-template-columns: 1fr 1fr;
+        justify-items: start;
+    }
+
+    h2 {
+        font-size: px(60);
+        font-weight: weight(bold);
+    }
+    p {
+        font-size: px(24);
+        font-weight: weight(regular);
+    }
+}
+
+.wrapper {
+    overflow-x: hidden;
+    position: relative;
+}
+* {
+    box-sizing: border-box;
+}
+
+svg {
+    position: absolute;
+    top: 12em;
+    left: 10vw;
+    width: 50vw;
+
+    .mask {
+        width: 0;
+    }
+}
